@@ -35,10 +35,6 @@ class SampleActivity : AppCompatActivity() {
                 Toast.makeText(this@SampleActivity, "当前输入内容为：$content", Toast.LENGTH_SHORT).show()
             })
         }
-
-        "".doIfEmpty{
-
-        }
     }
 
 }
