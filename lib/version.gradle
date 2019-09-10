@@ -1,0 +1,40 @@
+
+/**
+ * Build sdk and tools
+ */
+def build_versions = [:]
+build_versions.min_sdk = 19
+build_versions.target_sdk = 28
+build_versions.compile_sdk = 28
+build_versions.build_tools = "28.0.0"
+ext.build_versions = build_versions
+
+
+/**
+ * version
+ */
+def versions = [:]
+versions.android_gradle_plugin = "3.4.2"
+versions.kotlin = "1.3.41"
+versions.support = "28.0.0"
+versions.lib = "1.0.0"
+versions.sameple = "1.0.0"
+
+/**
+ * App dependencies Map
+ */
+def dep = [:]
+ext.deps = dep
+dep.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+
+def kotlin = [:]
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+kotlin.lib = "org.jetbrains.kotlin:kotlin-stdlib-jre7:$versions.kotlin"
+kotlin.reflect = "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin"
+dep.kotlin = kotlin
+
+
+def support = [:]
+support.v4 = "com.android.support:support-v4:$versions.support"
+support.appcompat_v7 = "com.android.support:appcompat-v7:$versions.support"
+dep.support = support

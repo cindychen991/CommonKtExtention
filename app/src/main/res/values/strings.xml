@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">KtExtention</string>
+    <string name="sample_hint">请填写比较字符</string>
+</resources>
